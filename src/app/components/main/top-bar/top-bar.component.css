@@ -6,10 +6,6 @@
   gap: 1rem;
 }
 
-.top-bar img {
-  display: block;
-}
-
 .top-bar > div {
   display: flex;
   align-items: center;

@@ -1,0 +1,152 @@
+.ticket-card {
+  border-radius: 0.77963rem;
+  background: var(--primary-color);
+  width: 25.5rem;
+  height: 16.5rem;
+}
+
+.ticket-card .ticket-header {
+  padding-top: 1.62rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.ticket-card .ticket-header .ticket-title {
+  color: #fff;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 1.31rem;
+}
+
+.ticket-card .ticket-header .ticket-url {
+  width: 14.13719rem;
+  height: 2.625rem;
+  border-radius: 0.51975rem;
+  border: 0.832px dashed #ddd;
+  background: var(--white-background-color);
+  display: flex;
+  align-items: center;
+  gap: 1.03rem;
+  padding-top: 0.88rem;
+  padding-bottom: 0.87rem;
+  padding-inline-end: 1.04rem;
+  padding-inline-start: 1.51rem;
+  margin-bottom: 0.69rem;
+}
+
+.ticket-card .ticket-header .ticket-url p {
+  color: var(--text-color);
+  font-family: Inter;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.45531rem;
+}
+
+.ticket-card .ticket-header p {
+  color: #fff;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.ticket-card .ticket-header .delete-btn {
+  position: absolute;
+  top: 1.5rem;
+  inset-inline-end: 2rem;
+}
+
+.ticket-card .ticket-line {
+  width: 100%;
+  height: 1.69231rem;
+  position: relative;
+  margin-top: 0.28rem;
+  margin-bottom: 0.03rem;
+}
+
+.ticket-card .ticket-line::before,
+.ticket-card .ticket-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  background: var(--gray-background-color);
+  width: 1.5rem;
+  height: 1.69231rem;
+  border-radius: 50%;
+}
+
+.ticket-card .ticket-line::before {
+  left: -0.75rem;
+}
+
+.ticket-card .ticket-line::after {
+  right: -0.75rem;
+}
+
+.ticket-card .ticket-line .dash-line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  width: 100%;
+  border: 2.495px dashed rgba(255, 255, 255, 0.4);
+  height: 3px;
+}
+
+.ticket-card .ticket-footer {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-inline-end: 2rem;
+  padding-inline-start: 1.69rem;
+  padding-bottom: 1.12rem;
+}
+
+.ticket-card .ticket-footer p {
+  color: #fff;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0.56rem;
+}
+
+.ticket-card .ticket-footer .discount {
+  display: flex;
+  align-items: center;
+  gap: 1.06rem;
+  margin-bottom: 0.44rem;
+}
+
+.ticket-card .ticket-footer .discount > span {
+  color: #fff;
+  /* font-family: Montserrat; */
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.ticket-card .ticket-footer .discount .share-btn {
+  display: flex;
+  align-items: center;
+  border-radius: 0.25rem;
+  border: 1px solid #fff;
+  padding: 0.25rem 0.375rem;
+  gap: 0.3rem;
+}
+
+.ticket-card .ticket-footer .discount .share-btn span {
+  color: #fff;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
