@@ -1,0 +1,47 @@
+.top-bar {
+  margin-bottom: 0.81rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.top-bar img {
+  display: block;
+}
+
+.top-bar > div {
+  display: flex;
+  align-items: center;
+  gap: 0.44rem;
+}
+
+.top-bar .back-button {
+  background-color: #e7eaed;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.top-bar .back-button:hover {
+  background-color: #dfe2e5;
+}
+
+.top-bar .ticket-number {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.75rem;
+}
+
+.top-bar .edit-button {
+  border-radius: 0.25rem;
+  border: 1px solid #e9eaea;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  padding-inline-end: 0.69rem;
+}
