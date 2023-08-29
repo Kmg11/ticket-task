@@ -16,7 +16,7 @@ export class TableComponent {
       },
       cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
       numberOfPeople: 1,
-      numberOfPurchases: "مرة واحدة",
+      numberOfPurchases: 'مرة واحدة',
       ticketFile: {
         fileName: 'تذكرة رقم 45.pdf',
         fileSize: '9mb',
@@ -30,27 +30,29 @@ export class TableComponent {
       user: {
         name: 'أحمد محمود',
         phone: '0123456789',
+        image: '../../../../assets/images/person.png',
       },
       cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
       numberOfPeople: 1,
-      numberOfPurchases: "مرة واحدة",
+      numberOfPurchases: 'مرة واحدة',
       ticketFile: {
         fileName: 'تذكرة رقم 45.pdf',
         fileSize: '9mb',
         fileType: 'pdf',
       },
       ticketNumber: 101,
-      ticketPrice: 40,
+      ticketPrice: 50,
     },
     {
       id: 3,
       user: {
         name: 'أحمد محمود',
         phone: '0123456789',
+        image: '../../../../assets/images/person.png',
       },
       cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
       numberOfPeople: 1,
-      numberOfPurchases: "مرة واحدة",
+      numberOfPurchases: 'مرة واحدة',
       ticketFile: {
         fileName: 'تذكرة رقم 45.pdf',
         fileSize: '9mb',
@@ -64,10 +66,11 @@ export class TableComponent {
       user: {
         name: 'أحمد محمود',
         phone: '0123456789',
+        image: '../../../../assets/images/person.png',
       },
       cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
       numberOfPeople: 1,
-      numberOfPurchases: "مرة واحدة",
+      numberOfPurchases: 'مرة واحدة',
       ticketFile: {
         fileName: 'تذكرة رقم 45.pdf',
         fileSize: '9mb',
@@ -84,7 +87,7 @@ export class TableComponent {
       },
       cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
       numberOfPeople: 1,
-      numberOfPurchases: "مرة واحدة",
+      numberOfPurchases: 'مرة واحدة',
       ticketFile: {
         fileName: 'تذكرة رقم 45.pdf',
         fileSize: '9mb',
@@ -101,7 +104,7 @@ export class TableComponent {
       },
       cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
       numberOfPeople: 1,
-      numberOfPurchases: "مرة واحدة",
+      numberOfPurchases: 'مرة واحدة',
       ticketFile: {
         fileName: 'تذكرة رقم 45.pdf',
         fileSize: '9mb',
@@ -118,7 +121,7 @@ export class TableComponent {
       },
       cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
       numberOfPeople: 1,
-      numberOfPurchases: "مرة واحدة",
+      numberOfPurchases: 'مرة واحدة',
       ticketFile: {
         fileName: 'تذكرة رقم 45.pdf',
         fileSize: '9mb',
@@ -135,7 +138,7 @@ export class TableComponent {
       },
       cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
       numberOfPeople: 1,
-      numberOfPurchases: "مرة واحدة",
+      numberOfPurchases: 'مرة واحدة',
       ticketFile: {
         fileName: 'تذكرة رقم 45.pdf',
         fileSize: '9mb',
@@ -152,7 +155,7 @@ export class TableComponent {
       },
       cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
       numberOfPeople: 1,
-      numberOfPurchases: "مرة واحدة",
+      numberOfPurchases: 'مرة واحدة',
       ticketFile: {
         fileName: 'تذكرة رقم 45.pdf',
         fileSize: '9mb',
@@ -169,7 +172,7 @@ export class TableComponent {
       },
       cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
       numberOfPeople: 1,
-      numberOfPurchases: "مرة واحدة",
+      numberOfPurchases: 'مرة واحدة',
       ticketFile: {
         fileName: 'تذكرة رقم 45.pdf',
         fileSize: '9mb',
@@ -186,7 +189,7 @@ export class TableComponent {
       },
       cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
       numberOfPeople: 1,
-      numberOfPurchases: "مرة واحدة",
+      numberOfPurchases: 'مرة واحدة',
       ticketFile: {
         fileName: 'تذكرة رقم 45.pdf',
         fileSize: '9mb',
@@ -203,7 +206,7 @@ export class TableComponent {
       },
       cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
       numberOfPeople: 1,
-      numberOfPurchases: "مرة واحدة",
+      numberOfPurchases: 'مرة واحدة',
       ticketFile: {
         fileName: 'تذكرة رقم 45.pdf',
         fileSize: '9mb',

@@ -1,11 +1,12 @@
 <div class="user">
   <p-avatar
     [label]="
-      user.name.split(' ')[0][0] +
-      (user.name.split(' ')[1] ? user.name.split(' ')[1][0] : '')
+      !user.image
+        ? user.name.split(' ')[0][0] +
+          (user.name.split(' ')[1] ? user.name.split(' ')[1][0] : '')
+        : undefined
     "
     [image]="user.image"
-    styleClass="mr-2"
     [style]="{
       'background-color': '#038CB7',
       color: '#ffffff',
