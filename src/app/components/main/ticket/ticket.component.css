@@ -1,8 +1,12 @@
 .ticket-card {
   border-radius: 0.77963rem;
-  background: var(--primary-color);
   width: 25.5rem;
   height: 16.5rem;
+  background: var(--primary-color);
+  background-image: url("../../../../assets/images/ticket-lines.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .ticket-card .ticket-header {
@@ -45,6 +49,10 @@
   font-style: normal;
   font-weight: 500;
   line-height: 1.45531rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
 }
 
 .ticket-card .ticket-header p {
@@ -127,7 +135,7 @@
 
 .ticket-card .ticket-footer .discount > span {
   color: #fff;
-  /* font-family: Montserrat; */
+  font-family: "Montserrat", sans-serif;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 500;

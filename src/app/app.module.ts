@@ -8,7 +8,13 @@ import { TicketComponent } from './components/main/ticket/ticket.component';
 import { TableComponent } from './components/main/table/table.component';
 
 @NgModule({
-  declarations: [AppComponent, TopBarComponent, ChartComponent, TicketComponent, TableComponent],
+  declarations: [
+    AppComponent,
+    TopBarComponent,
+    ChartComponent,
+    TicketComponent,
+    TableComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
