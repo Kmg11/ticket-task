@@ -4,3 +4,10 @@
   margin-inline-start: 136px;
   margin-inline-end: 37px;
 }
+
+.ticket-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}

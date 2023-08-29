@@ -1,1 +1,22 @@
-<p>chart works!</p>
+<div class="chart">
+  <header class="chart-header">
+    <div class="info">
+      <h3 class="title">إحصائيات إستخدام القسيمة</h3>
+      <p class="date">05 يوليو , 2023 - 05 أغسطس , 2023</p>
+    </div>
+
+    <div class="chart-dropdown">
+      <span>سنويا</span>
+      <img src="assets/icons/down-arrow.svg" alt="down arrow" />
+    </div>
+  </header>
+
+  <canvas
+    baseChart
+    class="chart"
+    [data]="lineChartData"
+    [options]="lineChartOptions"
+    [type]="lineChartType"
+    [style]="{ width: '100%', height: '7.70238rem', padding: 0 }"
+  ></canvas>
+</div>

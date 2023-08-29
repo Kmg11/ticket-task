@@ -1,0 +1,50 @@
+.chart {
+  border-radius: 0.5rem;
+  border: 0.807px solid #ebebeb;
+  background: var(--white-background-color);
+  min-width: 52.4375rem;
+  height: 16.5rem;
+  padding: 1.19rem 1.33rem 0 1.4rem;
+}
+
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.98rem;
+}
+
+.chart-header .info .title {
+  color: var(--text-color);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 0.8065rem;
+  margin-bottom: 0.62rem;
+}
+
+.chart-header .info .date {
+  color: #99a1b7;
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.8065rem; /* 92.173% */
+}
+
+.chart-header .chart-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.56rem;
+  padding-top: 0.66rem;
+  padding-bottom: 0.62rem;
+  padding-inline-start: 0.9rem;
+  padding-inline-end: 0.51rem;
+}
+
+.chart-header .chart-dropdown span {
+  color: #1c1c28;
+  font-size: 0.757rem;
+  font-weight: 400;
+  line-height: 140%;
+}
