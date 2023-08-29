@@ -1,0 +1,48 @@
+.prime-table {
+  background-color: var(--white-background-color);
+  border-radius: 0.5rem;
+  border: 1px solid #f3f3f5;
+}
+
+.prime-table tr th,
+.prime-table tr td {
+  text-align: center;
+}
+
+.prime-table tr th {
+  color: #abaab1;
+  font-size: 0.82994rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.45238rem; /* 175% */
+}
+
+.prime-table tr .td-id {
+  color: #898995;
+  font-family: Inter;
+  font-size: 0.82994rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.45238rem;
+}
+
+.prime-table tr .td-ticket-number,
+.prime-table tr .td-ticket-price,
+.prime-table tr .td-number-of-people {
+  color: var(--text-color);
+  font-family: Inter;
+  font-size: 0.82994rem;
+  font-weight: 400;
+  line-height: 1.45238rem;
+}
+
+.prime-table tr .td-ticket-cinemas,
+.prime-table tr .td-number-of-purchases {
+  color: var(--text-color);
+  font-size: 0.82994rem;
+  font-weight: 400;
+  line-height: 1.24488rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

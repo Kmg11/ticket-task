@@ -1,0 +1,24 @@
+<div class="user">
+  <p-avatar
+    [label]="
+      user.name.split(' ')[0][0] +
+      (user.name.split(' ')[1] ? user.name.split(' ')[1][0] : '')
+    "
+    [image]="user.image"
+    styleClass="mr-2"
+    [style]="{
+      'background-color': '#038CB7',
+      color: '#ffffff',
+      width: '1.86731rem',
+      height: '1.86731rem',
+      'font-family': 'Inter',
+      'font-weight': 600
+    }"
+    shape="circle"
+  ></p-avatar>
+
+  <div class="info">
+    <h4>{{ user.name }}</h4>
+    <p>{{ user.phone }}</p>
+  </div>
+</div>

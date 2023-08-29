@@ -1,1 +1,56 @@
-<p>table works!</p>
+<section>
+  <p-table
+    [value]="tickets"
+    [paginator]="true"
+    [rows]="5"
+    [showCurrentPageReport]="true"
+    [tableStyle]="{ 'min-width': '50rem' }"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [rowsPerPageOptions]="[5, 10, 15]"
+    class="prime-table"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th>#</th>
+        <th>المستخدم</th>
+        <th>رقم التذكرة</th>
+        <th>قيمى التذكرة</th>
+        <th>السينمات</th>
+        <th>عدد الأشخاص</th>
+        <th>عدد مرات الشراء</th>
+        <th>التذكرة</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-ticket>
+      <tr>
+        <td class="td-id">{{ ticket.id }}</td>
+        <td>
+          <app-user [user]="ticket.user"></app-user>
+        </td>
+        <td class="td-ticket-number">{{ ticket.ticketNumber }}</td>
+        <td class="td-ticket-price">${{ ticket.ticketPrice }}</td>
+        <td class="td-ticket-cinemas">{{ ticket.cinemas.join(", ") }}</td>
+        <td class="td-number-of-people">{{ ticket.numberOfPeople }}</td>
+        <td class="td-number-of-purchases">{{ ticket.numberOfPurchases }}</td>
+        <td>
+          <app-ticket-file [ticketFile]="ticket.ticketFile"></app-ticket-file>
+        </td>
+      </tr>
+    </ng-template>
+    <!-- <ng-template pTemplate="paginatorleft">
+      <p-button
+        type="button"
+        icon="pi pi-plus"
+        styleClass="p-button-text"
+      ></p-button>
+    </ng-template>
+    <ng-template pTemplate="paginatorright">
+      <p-button
+        type="button"
+        icon="pi pi-cloud"
+        styleClass="p-button-text"
+      ></p-button>
+    </ng-template> -->
+  </p-table>
+</section>
