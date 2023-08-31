@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Table } from 'primeng/table';
 import { TicketType } from 'src/app/types/ticket.type';
+import { ticketsData } from './ticketsData';
+import { DropdownChangeEvent } from 'primeng/dropdown';
 
 @Component({
   selector: 'app-table',
@@ -9,216 +11,43 @@ import { TicketType } from 'src/app/types/ticket.type';
 })
 export class TableComponent {
   checkedSwitch: boolean = true;
+  tickets: TicketType[] = ticketsData;
+  rowsPerPageOptions = [5, 10, 15];
+  rows = this.rowsPerPageOptions[0];
+  pages = Array.from(Array(Math.ceil(this.tickets.length / this.rows)).keys());
+  first = 0;
 
-  tickets: TicketType[] = [
-    {
-      id: 1,
-      user: {
-        name: 'محمد محمود',
-        phone: '0123456789',
-      },
-      cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
-      numberOfPeople: 1,
-      numberOfPurchases: 'مرة واحدة',
-      ticketFile: {
-        fileName: 'تذكرة رقم 45.pdf',
-        fileSize: '9mb',
-        fileType: 'pdf',
-      },
-      ticketNumber: 101,
-      ticketPrice: 40,
-    },
-    {
-      id: 2,
-      user: {
-        name: 'أحمد محمود',
-        phone: '0123456789',
-        image: '../../../../assets/images/person.png',
-      },
-      cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
-      numberOfPeople: 1,
-      numberOfPurchases: 'مرة واحدة',
-      ticketFile: {
-        fileName: 'تذكرة رقم 45.pdf',
-        fileSize: '9mb',
-        fileType: 'pdf',
-      },
-      ticketNumber: 101,
-      ticketPrice: 50,
-    },
-    {
-      id: 3,
-      user: {
-        name: 'أحمد محمود',
-        phone: '0123456789',
-        image: '../../../../assets/images/person.png',
-      },
-      cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
-      numberOfPeople: 1,
-      numberOfPurchases: 'مرة واحدة',
-      ticketFile: {
-        fileName: 'تذكرة رقم 45.pdf',
-        fileSize: '9mb',
-        fileType: 'pdf',
-      },
-      ticketNumber: 101,
-      ticketPrice: 40,
-    },
-    {
-      id: 4,
-      user: {
-        name: 'أحمد محمود',
-        phone: '0123456789',
-        image: '../../../../assets/images/person.png',
-      },
-      cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
-      numberOfPeople: 1,
-      numberOfPurchases: 'مرة واحدة',
-      ticketFile: {
-        fileName: 'تذكرة رقم 45.pdf',
-        fileSize: '9mb',
-        fileType: 'pdf',
-      },
-      ticketNumber: 101,
-      ticketPrice: 40,
-    },
-    {
-      id: 1,
-      user: {
-        name: 'أحمد محمود',
-        phone: '0123456789',
-      },
-      cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
-      numberOfPeople: 1,
-      numberOfPurchases: 'مرة واحدة',
-      ticketFile: {
-        fileName: 'تذكرة رقم 45.pdf',
-        fileSize: '9mb',
-        fileType: 'pdf',
-      },
-      ticketNumber: 101,
-      ticketPrice: 40,
-    },
-    {
-      id: 2,
-      user: {
-        name: 'أحمد محمود',
-        phone: '0123456789',
-      },
-      cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
-      numberOfPeople: 1,
-      numberOfPurchases: 'مرة واحدة',
-      ticketFile: {
-        fileName: 'تذكرة رقم 45.pdf',
-        fileSize: '9mb',
-        fileType: 'pdf',
-      },
-      ticketNumber: 101,
-      ticketPrice: 40,
-    },
-    {
-      id: 3,
-      user: {
-        name: 'أحمد محمود',
-        phone: '0123456789',
-      },
-      cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
-      numberOfPeople: 1,
-      numberOfPurchases: 'مرة واحدة',
-      ticketFile: {
-        fileName: 'تذكرة رقم 45.pdf',
-        fileSize: '9mb',
-        fileType: 'pdf',
-      },
-      ticketNumber: 101,
-      ticketPrice: 40,
-    },
-    {
-      id: 4,
-      user: {
-        name: 'أحمد محمود',
-        phone: '0123456789',
-      },
-      cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
-      numberOfPeople: 1,
-      numberOfPurchases: 'مرة واحدة',
-      ticketFile: {
-        fileName: 'تذكرة رقم 45.pdf',
-        fileSize: '9mb',
-        fileType: 'pdf',
-      },
-      ticketNumber: 101,
-      ticketPrice: 40,
-    },
-    {
-      id: 1,
-      user: {
-        name: 'أحمد محمود',
-        phone: '0123456789',
-      },
-      cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
-      numberOfPeople: 1,
-      numberOfPurchases: 'مرة واحدة',
-      ticketFile: {
-        fileName: 'تذكرة رقم 45.pdf',
-        fileSize: '9mb',
-        fileType: 'pdf',
-      },
-      ticketNumber: 101,
-      ticketPrice: 40,
-    },
-    {
-      id: 2,
-      user: {
-        name: 'أحمد محمود',
-        phone: '0123456789',
-      },
-      cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
-      numberOfPeople: 1,
-      numberOfPurchases: 'مرة واحدة',
-      ticketFile: {
-        fileName: 'تذكرة رقم 45.pdf',
-        fileSize: '9mb',
-        fileType: 'pdf',
-      },
-      ticketNumber: 101,
-      ticketPrice: 40,
-    },
-    {
-      id: 3,
-      user: {
-        name: 'أحمد محمود',
-        phone: '0123456789',
-      },
-      cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
-      numberOfPeople: 1,
-      numberOfPurchases: 'مرة واحدة',
-      ticketFile: {
-        fileName: 'تذكرة رقم 45.pdf',
-        fileSize: '9mb',
-        fileType: 'pdf',
-      },
-      ticketNumber: 101,
-      ticketPrice: 40,
-    },
-    {
-      id: 4,
-      user: {
-        name: 'أحمد محمود',
-        phone: '0123456789',
-      },
-      cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
-      numberOfPeople: 1,
-      numberOfPurchases: 'مرة واحدة',
-      ticketFile: {
-        fileName: 'تذكرة رقم 45.pdf',
-        fileSize: '9mb',
-        fileType: 'pdf',
-      },
-      ticketNumber: 101,
-      ticketPrice: 40,
-    },
-  ];
+  next() {
+    this.first = this.first + this.rows;
+  }
+
+  prev() {
+    this.first = this.first - this.rows;
+  }
+
+  goToPage(n: number) {
+    this.first = n * this.rows;
+  }
+
+  isPageActive(page: number): boolean {
+    return page === this.first / this.rows;
+  }
+
+  isLastPage(): boolean {
+    return this.first + this.rows >= this.tickets.length;
+  }
+
+  isFirstPage(): boolean {
+    return this.first === 0;
+  }
+
+  onRowsChange(e: DropdownChangeEvent) {
+    this.first = 0;
+    this.rows = e.value;
+    this.pages = Array.from(
+      Array(Math.ceil(this.tickets.length / e.value)).keys()
+    );
+  }
 
   clear(table: Table) {
     table.clear();

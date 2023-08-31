@@ -17,6 +17,7 @@ import { TicketFileComponent } from './components/main/table/ticket-file/ticket-
 import { InputTextModule } from 'primeng/inputtext';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { FormsModule } from '@angular/forms';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { FormsModule } from '@angular/forms';
     InputTextModule,
     InputSwitchModule,
     FormsModule,
+    DropdownModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
