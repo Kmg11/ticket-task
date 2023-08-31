@@ -4,6 +4,16 @@
   border: 1px solid #f3f3f5;
 }
 
+::ng-deep .prime-table .p-table-style {
+  width: 75rem;
+}
+
+@media (max-width: 1024px) {
+  ::ng-deep .prime-table .p-table-style {
+    width: 100%;
+  }
+}
+
 .prime-table .table-header {
   margin-bottom: 1rem;
   display: flex;
@@ -116,9 +126,10 @@
   font-size: 0.82994rem;
   font-weight: 400;
   line-height: 1.24488rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+}
+
+.prime-table tr .td-ticket-cinemas {
+  position: relative;
 }
 
 ::ng-deep .p-paginator {
@@ -199,7 +210,7 @@
   color: #fff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .prime-table .table-header {
     flex-direction: column;
     align-items: flex-start;

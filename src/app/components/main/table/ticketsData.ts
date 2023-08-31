@@ -7,7 +7,7 @@ export const ticketsData: TicketType[] = [
       name: 'محمد محمود',
       phone: '0123456789',
     },
-    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
+    cinemas: ['سينما مصر', ' مول العرب'],
     numberOfPeople: 1,
     numberOfPurchases: 'مرة واحدة',
     ticketFile: {
@@ -25,7 +25,7 @@ export const ticketsData: TicketType[] = [
       phone: '0123456789',
       image: '../../../../assets/images/person.png',
     },
-    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
+    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان'],
     numberOfPeople: 1,
     numberOfPurchases: 'مرة واحدة',
     ticketFile: {
@@ -61,7 +61,7 @@ export const ticketsData: TicketType[] = [
       phone: '0123456789',
       image: '../../../../assets/images/person.png',
     },
-    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
+    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان'],
     numberOfPeople: 1,
     numberOfPurchases: 'مرة واحدة',
     ticketFile: {
@@ -78,7 +78,7 @@ export const ticketsData: TicketType[] = [
       name: 'أحمد محمود',
       phone: '0123456789',
     },
-    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
+    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان'],
     numberOfPeople: 1,
     numberOfPurchases: 'مرة واحدة',
     ticketFile: {
@@ -95,7 +95,7 @@ export const ticketsData: TicketType[] = [
       name: 'أحمد محمود',
       phone: '0123456789',
     },
-    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
+    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان'],
     numberOfPeople: 1,
     numberOfPurchases: 'مرة واحدة',
     ticketFile: {
@@ -112,7 +112,7 @@ export const ticketsData: TicketType[] = [
       name: 'أحمد محمود',
       phone: '0123456789',
     },
-    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
+    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان'],
     numberOfPeople: 1,
     numberOfPurchases: 'مرة واحدة',
     ticketFile: {
@@ -129,7 +129,7 @@ export const ticketsData: TicketType[] = [
       name: 'أحمد محمود',
       phone: '0123456789',
     },
-    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
+    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان'],
     numberOfPeople: 1,
     numberOfPurchases: 'مرة واحدة',
     ticketFile: {
@@ -146,7 +146,7 @@ export const ticketsData: TicketType[] = [
       name: 'أحمد محمود',
       phone: '0123456789',
     },
-    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
+    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان'],
     numberOfPeople: 1,
     numberOfPurchases: 'مرة واحدة',
     ticketFile: {
@@ -163,7 +163,7 @@ export const ticketsData: TicketType[] = [
       name: 'أحمد محمود',
       phone: '0123456789',
     },
-    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
+    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان'],
     numberOfPeople: 1,
     numberOfPurchases: 'مرة واحدة',
     ticketFile: {
@@ -180,7 +180,7 @@ export const ticketsData: TicketType[] = [
       name: 'أحمد محمود',
       phone: '0123456789',
     },
-    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
+    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان'],
     numberOfPeople: 1,
     numberOfPurchases: 'مرة واحدة',
     ticketFile: {
@@ -197,7 +197,7 @@ export const ticketsData: TicketType[] = [
       name: 'أحمد محمود',
       phone: '0123456789',
     },
-    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
+    cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان'],
     numberOfPeople: 1,
     numberOfPurchases: 'مرة واحدة',
     ticketFile: {

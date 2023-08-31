@@ -6,6 +6,7 @@
     [rows]="rows"
     responsiveLayout="stack"
     [breakpoint]="'1024px'"
+    [tableStyleClass]="'p-table-style'"
     [rowsPerPageOptions]="rowsPerPageOptions"
     currentPageReportTemplate="'عرض {first} إلى {last} من أصل {totalRecords}'"
     [first]="first"
@@ -94,30 +95,45 @@
           <span class="p-column-title">#</span>
           {{ ticket.id }}
         </td>
+
         <td>
           <span class="p-column-title">المستخدم</span>
           <app-user [user]="ticket.user"></app-user>
         </td>
+
         <td class="td-ticket-number">
           <span class="p-column-title">رقم التذكرة</span>
           {{ ticket.ticketNumber }}
         </td>
+
         <td class="td-ticket-price">
           <span class="p-column-title">قيمى التذكرة</span>
           ${{ ticket.ticketPrice }}
         </td>
-        <td class="td-ticket-cinemas">
+
+        <td class="td-ticket-cinemas tooltip-parent">
           <span class="p-column-title">السينمات</span>
-          {{ ticket.cinemas.join(", ") }}
+          {{
+            ticket.cinemas.length > 3
+              ? ticket.cinemas.slice(0, 3).join(", ") + "..."
+              : ticket.cinemas.join(", ")
+          }}
+
+          <div class="tooltip tooltip-top" *ngIf="ticket.cinemas.length > 3">
+            {{ ticket.cinemas.join(", ") }}
+          </div>
         </td>
+
         <td class="td-number-of-people">
           <span class="p-column-title">عدد الأشخاص</span>
           {{ ticket.numberOfPeople }}
         </td>
+
         <td class="td-number-of-purchases">
           <span class="p-column-title">عدد مرات الشراء</span>
           {{ ticket.numberOfPurchases }}
         </td>
+
         <td>
           <span class="p-column-title">التذكرة</span>
           <app-ticket-file [ticketFile]="ticket.ticketFile"></app-ticket-file>
@@ -130,7 +146,6 @@
     <div class="view">
       <span>عرض</span>
 
-      <!-- run function when value change -->
       <p-dropdown
         [options]="rowsPerPageOptions"
         [(ngModel)]="rows"
