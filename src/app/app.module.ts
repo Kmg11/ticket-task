@@ -18,6 +18,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
+import { TablePaginationComponent } from './components/main/table/table-pagination/table-pagination.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { DropdownModule } from 'primeng/dropdown';
     TableComponent,
     UserComponent,
     TicketFileComponent,
+    TablePaginationComponent,
   ],
   imports: [
     BrowserModule,

@@ -136,80 +136,6 @@
   display: none !important;
 }
 
-.table-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.69rem 1rem 0.91rem;
-  background: var(--white-background-color);
-  transform: translateY(-1.25rem);
-}
-
-.table-pagination .view {
-  display: flex;
-  align-items: center;
-  gap: 0.47rem;
-}
-
-.table-pagination .view span {
-  color: #333;
-  font-size: 0.65625rem;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.table-pagination .paginator {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.table-pagination .paginator .arrow-icon {
-  display: flex;
-  width: 1.6875rem;
-  height: 1.6875rem;
-  padding: 0.28125rem;
-  justify-content: center;
-  align-items: center;
-  color: #7e8299;
-  transition: all 0.3s ease-in-out;
-}
-
-.table-pagination .paginator .arrow-icon:hover {
-  background: #f8f8f9;
-}
-
-.table-pagination .paginator .arrow-icon:disabled {
-  cursor: not-allowed;
-  color: #d8d8e5;
-}
-
-.table-pagination .paginator .page-number {
-  color: #7e8299;
-  text-align: center;
-  font-family: Inter;
-  font-size: 0.84375rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 0.84375rem;
-  letter-spacing: -0.00844rem;
-  width: 1.6875rem;
-  height: 1.6875rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.28125rem;
-  transition: all 0.3s ease-in-out;
-}
-
-.table-pagination .paginator .page-number.active,
-.table-pagination .paginator .page-number:hover {
-  background: var(--primary-color);
-  color: #fff;
-}
-
 @media (max-width: 1024px) {
   .prime-table .table-header {
     flex-direction: column;
@@ -226,12 +152,5 @@
   .prime-table .table-header > div:last-of-type {
     width: 100%;
     justify-content: space-between;
-  }
-
-  .table-pagination {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
   }
 }

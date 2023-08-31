@@ -1,0 +1,32 @@
+<footer class="table-pagination">
+  <div class="view">
+    <span>عرض</span>
+
+    <p-dropdown
+      [options]="rowsPerPageOptions"
+      [(ngModel)]="rows"
+      (onChange)="onRowsChange($event)"
+    ></p-dropdown>
+
+    <span>من اصل {{ tickets.length }}</span>
+  </div>
+
+  <div class="paginator" *ngIf="tickets.length > rows">
+    <button class="arrow-icon" [disabled]="isFirstPage()" (click)="prev()">
+      <i class="pi pi-angle-right"></i>
+    </button>
+
+    <button
+      *ngFor="let page of pages"
+      class="page-number"
+      [ngClass]="{ active: isPageActive(page) }"
+      (click)="goToPage(page)"
+    >
+      {{ page + 1 }}
+    </button>
+
+    <button class="arrow-icon" [disabled]="isLastPage()" (click)="next()">
+      <i class="pi pi-angle-left"></i>
+    </button>
+  </div>
+</footer>
