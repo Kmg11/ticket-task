@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Table } from 'primeng/table';
 import { TicketType } from 'src/app/types/ticket.type';
 
 @Component({
@@ -7,11 +8,13 @@ import { TicketType } from 'src/app/types/ticket.type';
   styleUrls: ['./table.component.css'],
 })
 export class TableComponent {
+  checkedSwitch: boolean = true;
+
   tickets: TicketType[] = [
     {
       id: 1,
       user: {
-        name: 'أحمد محمود',
+        name: 'محمد محمود',
         phone: '0123456789',
       },
       cinemas: ['سينما مصر', ' مول العرب', 'برج الأطنان', 'سرايا القبة'],
@@ -216,4 +219,8 @@ export class TableComponent {
       ticketPrice: 40,
     },
   ];
+
+  clear(table: Table) {
+    table.clear();
+  }
 }

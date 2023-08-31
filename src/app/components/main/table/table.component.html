@@ -1,5 +1,6 @@
 <section>
   <p-table
+    #ticketsTable
     [value]="tickets"
     [paginator]="true"
     [rows]="5"
@@ -7,8 +8,61 @@
     [tableStyle]="{ 'min-width': '50rem' }"
     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
     [rowsPerPageOptions]="[5, 10, 15]"
+    [globalFilterFields]="[
+      'id',
+      'user.name',
+      'user.phone',
+      'ticketPrice',
+      'cinemas',
+      'numberOfPeople',
+      'numberOfPurchases'
+    ]"
     class="prime-table"
   >
+    <ng-template pTemplate="caption">
+      <header class="table-header">
+        <div>
+          <h3>مبيعات التذاكر</h3>
+
+          <span class="p-input-icon-right">
+            <i>
+              <img src="assets/icons/search.svg" alt="search icon" />
+            </i>
+
+            <input
+              #ticketsTableSearch
+              pInputText
+              type="text"
+              (input)="
+                ticketsTable.filterGlobal(ticketsTableSearch.value, 'contains')
+              "
+              placeholder="بحث عن ..."
+            />
+          </span>
+
+          <span class="icon">
+            <img src="assets/icons/filter.svg" alt="filter icon" />
+          </span>
+
+          <span class="icon">
+            <img src="assets/icons/sort.svg" alt="filter icon" />
+          </span>
+        </div>
+
+        <div>
+          <div class="table-switch">
+            <p-inputSwitch
+              [(ngModel)]="checkedSwitch"
+              [style]="{ transform: 'rotate(180deg)' }"
+            ></p-inputSwitch>
+            <span>مفعلة</span>
+          </div>
+
+          <p-button>حجز تذكرة جديدة</p-button>
+        </div>
+      </header>
+    </ng-template>
+
     <ng-template pTemplate="header">
       <tr>
         <th>#</th>
@@ -44,19 +98,5 @@
         </td>
       </tr>
     </ng-template>
-    <!-- <ng-template pTemplate="paginatorleft">
-      <p-button
-        type="button"
-        icon="pi pi-plus"
-        styleClass="p-button-text"
-      ></p-button>
-    </ng-template>
-    <ng-template pTemplate="paginatorright">
-      <p-button
-        type="button"
-        icon="pi pi-cloud"
-        styleClass="p-button-text"
-      ></p-button>
-    </ng-template> -->
   </p-table>
 </section>

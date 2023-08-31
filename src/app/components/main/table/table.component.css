@@ -4,6 +4,74 @@
   border: 1px solid #f3f3f5;
 }
 
+.prime-table .table-header {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prime-table .table-header div {
+  display: flex;
+  align-items: center;
+}
+
+.prime-table .table-header h3 {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  margin-inline-end: 1.06rem;
+}
+
+.prime-table .table-header input::placeholder {
+  color: rgba(146, 161, 173, 0.4);
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.prime-table .table-header .icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white-background-color);
+  margin-left: 0.44rem;
+  margin-right: 0.44rem;
+}
+
+::ng-deep .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+  background: var(--primary-color);
+}
+
+.prime-table .table-header .table-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.48rem;
+  margin-inline-end: 1.88rem;
+}
+
+.prime-table .table-header .table-switch span {
+  color: #9c9d9f;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  top: -0.2rem;
+}
+
+::ng-deep .p-button {
+  background: var(--primary-color);
+}
+
+::ng-deep .p-button:hover {
+  background: #8a74f9;
+}
+
 .prime-table tr th,
 .prime-table tr td {
   text-align: center;

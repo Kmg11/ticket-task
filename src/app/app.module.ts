@@ -7,7 +7,6 @@ import { TopBarComponent } from './components/main/top-bar/top-bar.component';
 import { ChartComponent } from './components/main/chart/chart.component';
 import { TicketComponent } from './components/main/ticket/ticket.component';
 import { TableComponent } from './components/main/table/table.component';
-import { TableHeaderComponent } from './components/main/table/table-header/table-header.component';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +14,9 @@ import { UserComponent } from './components/main/table/user/user.component';
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import { TicketFileComponent } from './components/main/table/ticket-file/ticket-file.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputSwitchModule } from 'primeng/inputswitch';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,6 @@ import { TicketFileComponent } from './components/main/table/ticket-file/ticket-
     ChartComponent,
     TicketComponent,
     TableComponent,
-    TableHeaderComponent,
     UserComponent,
     TicketFileComponent,
   ],
@@ -36,6 +37,9 @@ import { TicketFileComponent } from './components/main/table/ticket-file/ticket-
     ButtonModule,
     AvatarModule,
     AvatarGroupModule,
+    InputTextModule,
+    InputSwitchModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
