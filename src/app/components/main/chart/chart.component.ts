@@ -9,8 +9,6 @@ import Annotation from 'chartjs-plugin-annotation';
   styleUrls: ['./chart.component.css'],
 })
 export class ChartComponent {
-  private newLabel? = 'New label';
-
   constructor() {
     Chart.register(Annotation);
   }
@@ -23,11 +21,6 @@ export class ChartComponent {
         backgroundColor: 'rgba(138, 116, 249, 0.2)',
         borderColor: 'rgb(138, 116, 249)',
         borderWidth: 3,
-        /* 
-          box-shadow: 0px 6.452122211456299px 6.452122211456299px 0px rgba(13, 10, 44, 0.08);
-          width: 1.19056rem;
-          height: 1.15938rem;
-        */
         pointBackgroundColor: '#8A74F9',
         pointBorderWidth: 1.613,
         pointBorderColor: '#fff',
@@ -53,6 +46,7 @@ export class ChartComponent {
   };
 
   public lineChartOptions: ChartConfiguration['options'] = {
+    responsive: true,
     elements: {
       line: { tension: 0.5 },
       point: { radius: 8 },

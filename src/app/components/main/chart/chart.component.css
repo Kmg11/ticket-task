@@ -2,9 +2,22 @@
   border-radius: 0.5rem;
   border: 0.807px solid #ebebeb;
   background: var(--white-background-color);
-  min-width: 52.4375rem;
-  height: 16.5rem;
+  width: 52.4375rem;
+  max-height: 16.5rem;
   padding: 1.19rem 1.33rem 0 1.4rem;
+}
+
+.chart > div {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .chart {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
 }
 
 .chart-header {

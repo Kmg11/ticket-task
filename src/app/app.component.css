@@ -1,14 +1,40 @@
 .ticket-container {
-  margin-top: 75px;
-  margin-bottom: 37px;
-  margin-inline-start: 136px;
-  margin-inline-end: 37px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 4.69rem;
+  padding-bottom: 2.31rem;
+  padding-inline-start: 8.5rem;
+  padding-inline-end: 2.06rem;
+  max-width: 1440px;
 }
 
 .ticket-info {
   width: 100%;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .ticket-container {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-inline-start: 2.5rem;
+    padding-inline-end: 2.5rem;
+  }
+
+  .ticket-info {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .ticket-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+  }
 }

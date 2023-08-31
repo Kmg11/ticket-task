@@ -4,7 +4,8 @@
     [value]="tickets"
     [paginator]="true"
     [rows]="rows"
-    [tableStyle]="{ 'min-width': '50rem' }"
+    responsiveLayout="stack"
+    [breakpoint]="'1024px'"
     [rowsPerPageOptions]="rowsPerPageOptions"
     currentPageReportTemplate="'عرض {first} إلى {last} من أصل {totalRecords}'"
     [first]="first"
@@ -24,29 +25,34 @@
         <div>
           <h3>مبيعات التذاكر</h3>
 
-          <span class="p-input-icon-right">
-            <i>
-              <img src="assets/icons/search.svg" alt="search icon" />
-            </i>
+          <div class="search-and-filter">
+            <span class="p-input-icon-right">
+              <i>
+                <img src="assets/icons/search.svg" alt="search icon" />
+              </i>
 
-            <input
-              #ticketsTableSearch
-              pInputText
-              type="text"
-              (input)="
-                ticketsTable.filterGlobal(ticketsTableSearch.value, 'contains')
-              "
-              placeholder="بحث عن ..."
-            />
-          </span>
+              <input
+                #ticketsTableSearch
+                pInputText
+                type="text"
+                (input)="
+                  ticketsTable.filterGlobal(
+                    ticketsTableSearch.value,
+                    'contains'
+                  )
+                "
+                placeholder="بحث عن ..."
+              />
+            </span>
 
-          <span class="icon">
-            <img src="assets/icons/filter.svg" alt="filter icon" />
-          </span>
+            <span class="icon">
+              <img src="assets/icons/filter.svg" alt="filter icon" />
+            </span>
 
-          <span class="icon">
-            <img src="assets/icons/sort.svg" alt="filter icon" />
-          </span>
+            <span class="icon">
+              <img src="assets/icons/sort.svg" alt="filter icon" />
+            </span>
+          </div>
         </div>
 
         <div>
@@ -58,12 +64,12 @@
             <span>مفعلة</span>
           </div>
 
-          <p-button>حجز تذكرة جديدة</p-button>
+          <p-button styleClass="p-button-sm">حجز تذكرة جديدة</p-button>
         </div>
       </header>
     </ng-template>
 
-    <ng-template pTemplate="header">
+    <ng-template pTemplate="header" let-columns>
       <tr>
         <th>#</th>
         <th>المستخدم</th>
@@ -84,16 +90,36 @@
 
     <ng-template pTemplate="body" let-ticket>
       <tr>
-        <td class="td-id">{{ ticket.id }}</td>
+        <td class="td-id">
+          <span class="p-column-title">#</span>
+          {{ ticket.id }}
+        </td>
         <td>
+          <span class="p-column-title">المستخدم</span>
           <app-user [user]="ticket.user"></app-user>
         </td>
-        <td class="td-ticket-number">{{ ticket.ticketNumber }}</td>
-        <td class="td-ticket-price">${{ ticket.ticketPrice }}</td>
-        <td class="td-ticket-cinemas">{{ ticket.cinemas.join(", ") }}</td>
-        <td class="td-number-of-people">{{ ticket.numberOfPeople }}</td>
-        <td class="td-number-of-purchases">{{ ticket.numberOfPurchases }}</td>
+        <td class="td-ticket-number">
+          <span class="p-column-title">رقم التذكرة</span>
+          {{ ticket.ticketNumber }}
+        </td>
+        <td class="td-ticket-price">
+          <span class="p-column-title">قيمى التذكرة</span>
+          ${{ ticket.ticketPrice }}
+        </td>
+        <td class="td-ticket-cinemas">
+          <span class="p-column-title">السينمات</span>
+          {{ ticket.cinemas.join(", ") }}
+        </td>
+        <td class="td-number-of-people">
+          <span class="p-column-title">عدد الأشخاص</span>
+          {{ ticket.numberOfPeople }}
+        </td>
+        <td class="td-number-of-purchases">
+          <span class="p-column-title">عدد مرات الشراء</span>
+          {{ ticket.numberOfPurchases }}
+        </td>
         <td>
+          <span class="p-column-title">التذكرة</span>
           <app-ticket-file [ticketFile]="ticket.ticketFile"></app-ticket-file>
         </td>
       </tr>

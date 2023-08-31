@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .prime-table .table-header div {
@@ -23,6 +24,12 @@
   font-style: normal;
   line-height: normal;
   margin-inline-end: 1.06rem;
+}
+
+.prime-table .table-header .search-and-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.44rem;
 }
 
 .prime-table .table-header input::placeholder {
@@ -40,8 +47,6 @@
   align-items: center;
   justify-content: center;
   background: var(--white-background-color);
-  margin-left: 0.44rem;
-  margin-right: 0.44rem;
 }
 
 ::ng-deep .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
@@ -147,6 +152,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .table-pagination .paginator .arrow-icon {
@@ -191,4 +197,30 @@
 .table-pagination .paginator .page-number:hover {
   background: var(--primary-color);
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .prime-table .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .prime-table .table-header > div:first-of-type {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .prime-table .table-header > div:last-of-type {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .table-pagination {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
 }

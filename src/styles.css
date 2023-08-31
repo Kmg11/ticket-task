@@ -9,6 +9,10 @@
   --gray-background-color: #f3f5f7;
   --dark-background-color: #1e1b39;
   --white-background-color: #ffffff;
+
+  --mobile-media: 768px;
+  --tablet-media: 1024px;
+  --desktop-media: 1440px;
 }
 
 * {
@@ -25,14 +29,6 @@ body {
 
 .p-component {
   font-family: "Neo Sans Arabic", sans-serif;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  max-width: 2000px;
 }
 
 a {
