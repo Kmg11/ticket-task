@@ -9,6 +9,7 @@ import { DropdownChangeEvent } from 'primeng/dropdown';
   styleUrls: ['./table.component.css'],
 })
 export class TableComponent {
+  checkedSwitch: boolean = true;
   tickets: TicketType[] = ticketsData;
   rowsPerPageOptions = [5, 10, 15];
   rows = this.rowsPerPageOptions[0];

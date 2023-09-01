@@ -18,7 +18,6 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
-import { TableHeaderComponent } from './components/main/table/table-header/table-header.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +28,6 @@ import { TableHeaderComponent } from './components/main/table/table-header/table
     TableComponent,
     UserComponent,
     TicketFileComponent,
-    TableHeaderComponent,
   ],
   imports: [
     BrowserModule,
