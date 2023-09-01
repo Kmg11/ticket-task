@@ -111,7 +111,13 @@
     </div>
 
     <div class="paginator" *ngIf="tickets.length > rows">
-      <button class="arrow-icon" [disabled]="isFirstPage()" (click)="prev()">
+      <button
+        class="arrow-icon"
+        [disabled]="isFirstPage()"
+        (click)="prev()"
+        title="السابق"
+        aria-label="السابق"
+      >
         <i class="pi pi-angle-right"></i>
       </button>
 
@@ -124,7 +130,13 @@
         {{ page + 1 }}
       </button>
 
-      <button class="arrow-icon" [disabled]="isLastPage()" (click)="next()">
+      <button
+        class="arrow-icon"
+        [disabled]="isLastPage()"
+        (click)="next()"
+        title="التالي"
+        aria-label="التالي"
+      >
         <i class="pi pi-angle-left"></i>
       </button>
     </div>
