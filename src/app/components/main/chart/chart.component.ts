@@ -16,7 +16,7 @@ export class ChartComponent {
   public lineChartData: ChartConfiguration['data'] = {
     datasets: [
       {
-        data: [200, 250, 200, 300, 400, 270, 400, 300, 255, 250, 200, 400],
+        data: [200, 250, 200, 300, 400, 270, 400, 300, 255, 250, 100, 400],
         yAxisID: 'y',
         backgroundColor: 'rgba(138, 116, 249, 0.2)',
         borderColor: 'rgb(138, 116, 249)',
@@ -49,10 +49,25 @@ export class ChartComponent {
     responsive: true,
     elements: {
       line: { tension: 0.5 },
-      point: { radius: 8 },
+      point: {
+        radius: function (context) {
+          var index = context.dataIndex;
+          var value = context.dataset.data[index];
+          return index ===
+            context.dataset.data.indexOf(
+              Math.max(...(context.dataset.data as number[]))
+            )
+            ? 10
+            : 0;
+        },
+      },
     },
     scales: {
-      y: { display: false },
+      y: {
+        display: false,
+        beginAtZero: true,
+        ticks: { stepSize: 100 },
+      },
       x: {
         ticks: {
           align: 'center',

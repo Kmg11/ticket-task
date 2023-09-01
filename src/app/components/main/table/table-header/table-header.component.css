@@ -1,0 +1,83 @@
+.table-header {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.table-header div {
+  display: flex;
+  align-items: center;
+}
+
+.table-header h3 {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  margin-inline-end: 1.06rem;
+}
+
+.table-header .search-and-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.44rem;
+}
+
+.table-header input::placeholder {
+  color: rgba(146, 161, 173, 0.4);
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.table-header .icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white-background-color);
+}
+
+::ng-deep .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+  background: var(--primary-color);
+}
+
+.table-header .table-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.48rem;
+  margin-inline-end: 1.88rem;
+}
+
+.table-header .table-switch span {
+  color: #9c9d9f;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  top: -0.2rem;
+}
+
+@media (max-width: 1024px) {
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .table-header > div:first-of-type {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .table-header > div:last-of-type {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

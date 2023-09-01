@@ -22,52 +22,7 @@
     class="prime-table"
   >
     <ng-template pTemplate="caption">
-      <header class="table-header">
-        <div>
-          <h3>مبيعات التذاكر</h3>
-
-          <div class="search-and-filter">
-            <span class="p-input-icon-right">
-              <i>
-                <img src="assets/icons/search.svg" alt="search icon" />
-              </i>
-
-              <input
-                #ticketsTableSearch
-                pInputText
-                type="text"
-                (input)="
-                  ticketsTable.filterGlobal(
-                    ticketsTableSearch.value,
-                    'contains'
-                  )
-                "
-                placeholder="بحث عن ..."
-              />
-            </span>
-
-            <span class="icon">
-              <img src="assets/icons/filter.svg" alt="filter icon" />
-            </span>
-
-            <span class="icon">
-              <img src="assets/icons/sort.svg" alt="filter icon" />
-            </span>
-          </div>
-        </div>
-
-        <div>
-          <div class="table-switch">
-            <p-inputSwitch
-              [(ngModel)]="checkedSwitch"
-              [style]="{ transform: 'rotate(180deg)' }"
-            ></p-inputSwitch>
-            <span>مفعلة</span>
-          </div>
-
-          <p-button styleClass="p-button-sm">حجز تذكرة جديدة</p-button>
-        </div>
-      </header>
+      <app-table-header [ticketsTable]="ticketsTable"></app-table-header>
     </ng-template>
 
     <ng-template pTemplate="header" let-columns>
@@ -142,11 +97,36 @@
     </ng-template>
   </p-table>
 
-  <app-table-pagination
-    [first]="first"
-    [pages]="pages"
-    [rows]="rows"
-    [rowsPerPageOptions]="rowsPerPageOptions"
-    [tickets]="tickets"
-  ></app-table-pagination>
+  <footer class="table-pagination">
+    <div class="view">
+      <span>عرض</span>
+
+      <p-dropdown
+        [options]="rowsPerPageOptions"
+        [(ngModel)]="rows"
+        (onChange)="onRowsChange($event)"
+      ></p-dropdown>
+
+      <span>من اصل {{ tickets.length }}</span>
+    </div>
+
+    <div class="paginator" *ngIf="tickets.length > rows">
+      <button class="arrow-icon" [disabled]="isFirstPage()" (click)="prev()">
+        <i class="pi pi-angle-right"></i>
+      </button>
+
+      <button
+        *ngFor="let page of pages"
+        class="page-number"
+        [ngClass]="{ active: isPageActive(page) }"
+        (click)="goToPage(page)"
+      >
+        {{ page + 1 }}
+      </button>
+
+      <button class="arrow-icon" [disabled]="isLastPage()" (click)="next()">
+        <i class="pi pi-angle-left"></i>
+      </button>
+    </div>
+  </footer>
 </section>
